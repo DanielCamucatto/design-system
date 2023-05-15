@@ -1,6 +1,17 @@
-@mixin color ($color){
-    color: $color;
-    &:hover{
-        color: lighten($color-link, 20%);
+@mixin cor($nome, $value) {
+    .color-#{$nome} {
+        color: $value;
+        &:hover{
+            color: darken($value, 20%);
+        }
     }
+
+    .bg-#{$nome} {
+        background-color: $value;
+    }
+}
+
+@each $color,
+$value in $colors {
+    @include cor($color, $value)
 }
