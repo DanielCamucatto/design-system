@@ -2,7 +2,7 @@
     .color-#{$nome} {
         color: $value;
         &:hover{
-            color: darken($value, 20%);
+            color: darken($value, 10%);
         }
     }
 
